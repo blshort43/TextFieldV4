@@ -6,7 +6,8 @@ export const CardStyle = css`
   box-shadow: none;
   margin-top: ${props =>
     props.marginTop || props.mt ? props.marginTop || props.mt : '8px'};
-  border-radius: ${props => (props.borderRadius ? props.borderRadius : '6px')};
+  background-color: none;
+  background: none;
 `;
 
 // <input> or <select> styling
