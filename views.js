@@ -6,6 +6,7 @@ export const CardStyle = css`
   box-shadow: none;
   margin-top: ${props =>
     props.marginTop || props.mt ? props.marginTop || props.mt : '8px'};
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : '6px')};
 `;
 
 // <input> or <select> styling
@@ -28,7 +29,7 @@ export const InputStyle = css`
   }
   background: ${props => props.background || props.bg || 'none'};
   border-radius: ${props => (props.borderRadius ? props.borderRadius : '6px')};
-  width: 100%;
+  width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '50px')};
   :hover {
     ::-webkit-datetime-edit {
@@ -81,7 +82,6 @@ export const LegendStyle = css`
   pointer-events: none;
   font-size: 12px;
   transition: all 0.25s ease-in-out;
-
   box-sizing: border-box;
 `;
 
