@@ -71,6 +71,7 @@ class TextField extends React.PureComponent {
         </StyledLegend>
         <StyledInput
           {...props}
+          readOnly={!this.props.onChange}
           error={error}
           name={name}
           placeholder={placeholder || label}
