@@ -5,7 +5,7 @@ export const CardStyle = css`
   height: fit-content;
   box-shadow: none;
   margin-bottom: ${props =>
-    props.marginBottom || props.mb ? props.marginBottom || props.mb : '4px'};
+    props.marginBottom || props.mb ? props.marginBottom || props.mb : '6px'};
   background-color: none;
   background: none;
 `;
@@ -29,9 +29,9 @@ export const InputStyle = css`
     opacity: ${props => props.value === '' && '0.6'};
   }
   background: ${props => props.background || props.bg || 'none'};
-  border-radius: ${props => (props.borderRadius ? props.borderRadius : '4px')};
-  width: ${props => (props.width ? props.width : '100%')};
-  height: ${props => (props.height ? props.height : '50px')};
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : '6px')};
+  width: ${props => (props.width ? props.width : '200px')};
+  height: ${props => (props.height ? props.height : '45px')};
   :hover {
     ::-webkit-datetime-edit {
       opacity: 1;
