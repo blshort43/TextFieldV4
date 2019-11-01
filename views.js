@@ -94,4 +94,3 @@ export const ErrorTextStyle = css`
   margin: 0;
   padding: 0;
 `;
-
