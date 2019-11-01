@@ -4,8 +4,8 @@ import { css } from 'styled-components';
 export const CardStyle = css`
   height: fit-content;
   box-shadow: none;
-  margin-top: ${props =>
-    props.marginTop || props.mt ? props.marginTop || props.mt : '8px'};
+  margin-bottom: ${props =>
+    props.marginBottom || props.mb ? props.marginBottom || props.mb : '4px'};
   background-color: none;
   background: none;
 `;
@@ -21,7 +21,7 @@ export const InputStyle = css`
   box-sizing: border-box;
   border: ${props => {
     if (props.error) {
-      return props.errorBorder || '1px solid red';
+      return props.errorBorder || '1px solid #f44336';
     }
     return props.border || '1px solid #909090';
   }};
@@ -29,7 +29,7 @@ export const InputStyle = css`
     opacity: ${props => props.value === '' && '0.6'};
   }
   background: ${props => props.background || props.bg || 'none'};
-  border-radius: ${props => (props.borderRadius ? props.borderRadius : '6px')};
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : '4px')};
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '50px')};
   :hover {
@@ -40,7 +40,7 @@ export const InputStyle = css`
       props.colorHover ? props.colorHover : props.color || '#000000'};
     border: ${props => {
       if (props.error) {
-        return props.errorBorder || '1px solid red';
+        return props.errorBorder || '1px solid #f44336';
       }
       return props.borderHover
         ? props.borderHover
@@ -61,7 +61,7 @@ export const InputStyle = css`
       props.colorFocus ? props.colorFocus : props.color || '#000000'};
     border: ${props => {
       if (props.error) {
-        return props.errorBorder || '1px solid red';
+        return props.errorBorder || '1px solid #f44336';
       }
       return props.borderFocus
         ? props.borderFocus
@@ -78,7 +78,9 @@ export const InputStyle = css`
 `;
 
 export const LegendStyle = css`
-  color: ${props => (props.labelColor ? props.labelColor : '#000000')};
+  color: ${props =>
+    (props.labelColor ? props.labelColor : '#000000') ||
+    (props.error ? '#f44336' : props.label.Color || '#000000')};
   outline: none;
   pointer-events: none;
   font-size: 12px;
@@ -87,8 +89,9 @@ export const LegendStyle = css`
 `;
 
 export const ErrorTextStyle = css`
-  color: red;
+  color: #f44336;
   font-size: 12px;
   margin: 0;
   padding: 0;
 `;
+
