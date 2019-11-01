@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Card } from 'versa-ui';
+import { Card } from 'Rebass';
 import { CardStyle, InputStyle, LegendStyle, ErrorTextStyle } from '../Views';
 
 const StyledCard = styled(Card)`
@@ -50,7 +50,6 @@ class TextField extends React.PureComponent {
     } = this.props;
     return (
       <StyledCard
-        {...props}
         style={{ border: 'none' }}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -77,9 +76,6 @@ class TextField extends React.PureComponent {
           placeholder={placeholder || label}
           type={type}
           value={value || ''}
-          style={{
-            margin: '0',
-          }}
         />
         <ErrorText
           style={{
@@ -107,4 +103,3 @@ TextField.propTypes = {
 };
 
 export default TextField;
-
