@@ -78,7 +78,6 @@ class TextField extends React.PureComponent {
           type={type}
           value={value || ''}
           style={{
-            width: '100%',
             margin: '0',
           }}
         />
